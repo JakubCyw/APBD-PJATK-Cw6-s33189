@@ -1,11 +1,10 @@
 ﻿namespace WebApplication2.DTO_s;
 
-public class AppointmentListDto
-{
-    public int IdAppointment { get; set; }
-    public DateTime AppointmentDate { get; set; }
-    public string Status { get; set; } = string.Empty;
-    public string Reason { get; set; } = string.Empty;
-    public string PatientFullName { get; set; } = string.Empty;
-    public string PatientEmail { get; set; } = string.Empty;
-}
+public record AppointmentListDto(
+    int IdAppointment,
+    DateTime AppointmentDate,
+    string Status,
+    string Reason,
+    string PatientFullName,
+    string PatientEmail
+    );
